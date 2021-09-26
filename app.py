@@ -31,7 +31,7 @@ def get_by_prefix(db_schema, table_name, column_name, prefix):
 
 @app.route('/users')
 def get_users():
-    res = d_service.get_full_resource("demo_flask", "user")
+    res = d_service.get_full_resource("user_resource", "user")
     rsp = Response(json.dumps(res), status=200, content_type="application/json")
     return rsp
 
